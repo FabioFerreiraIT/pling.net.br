@@ -1,6 +1,6 @@
 {
   "name": "pling-site",
-  "version": "1.2.1",
+  "version": "1.4.0",
   "description": "Pling site",
   "main": "server.js",
   "author": "Pling <contato@pling.net.br>",
@@ -11,13 +11,12 @@
     "npm": "3.9.5"
   },
   "scripts": {
-    "test": "node_modules/gulp/bin/gulp.js test",
-    "clean": "node_modules/gulp/bin/gulp.js clean",
-    "build": "node_modules/gulp/bin/gulp.js build",
-    "release": "node_modules/gulp/bin/gulp.js release",
-    "dev": "node_modules/gulp/bin/gulp.js dev",
-    "bower": "bower install --allow-root",
-    "start": "NODE_ENV=production pm2 start server.js --name \"pling.net.br\""
+    "test": "node node_modules/gulp/bin/gulp.js test",
+    "clean": "node node_modules/gulp/bin/gulp.js clean",
+    "build": "node node_modules/gulp/bin/gulp.js build",
+    "release": "node node_modules/gulp/bin/gulp.js release",
+    "dev": "node node_modules/gulp/bin/gulp.js dev",
+    "start": "pm2 start server.js --name \"pling.net.br\""
   },
   "repository": {
     "type": "git",
@@ -45,15 +44,17 @@
     "gulp-ng-annotate": "^2.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.4",
-    "open": "0.0.5",
-    "gulp-util": "^2.0.0"
+    "gulp-util": "^2.0.0",
+    "open": "0.0.5"
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.12.3",
     "findup-sync": "^0.4.3",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-flatten": "^0.3.1",
     "gulp-minify-html": "^1.0.6",
+    "pling-ui-lite": "^0.1.4",
     "serve-static": "^1.9.2"
   }
 }
